@@ -177,6 +177,76 @@ export class GamePanel {
             background: rgba(255, 255, 255, 0.2);
             border-color: #29abe2;
         }
+        #input-dialogue-box {
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 500px;
+            max-width: 90%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            color: white;
+            display: none;
+        }
+        #input-dialogue-box.visible {
+            display: block;
+        }
+        #input-dialogue-box h2 {
+            margin: 0 0 10px 0;
+            color: #29abe2;
+        }
+        #input-dialogue-box p {
+            margin: 0 0 15px 0;
+            line-height: 1.5;
+        }
+        #input-dialogue-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            font-family: var(--vscode-font-family);
+            box-sizing: border-box;
+        }
+        #input-dialogue-input:focus {
+            outline: none;
+            border-color: #29abe2;
+            background: rgba(255, 255, 255, 0.15);
+        }
+        #input-dialogue-input::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+        .input-dialogue-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .input-dialogue-button {
+            flex: 1;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-align: center;
+            color: white;
+        }
+        .input-dialogue-button:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: #29abe2;
+        }
+        .input-dialogue-button.submit {
+            background: rgba(41, 171, 226, 0.3);
+            border-color: #29abe2;
+        }
+        .input-dialogue-button.submit:hover {
+            background: rgba(41, 171, 226, 0.5);
+        }
         #controls-info {
             position: absolute;
             bottom: 20px;
@@ -211,6 +281,16 @@ export class GamePanel {
         <h2 id="dialogue-title"></h2>
         <p id="dialogue-text"></p>
         <div id="dialogue-options"></div>
+    </div>
+
+    <div id="input-dialogue-box">
+        <h2 id="input-dialogue-title"></h2>
+        <p id="input-dialogue-text"></p>
+        <input type="text" id="input-dialogue-input" placeholder="Enter code..." />
+        <div class="input-dialogue-buttons">
+            <div id="input-dialogue-submit" class="input-dialogue-button submit">Submit</div>
+            <div id="input-dialogue-cancel" class="input-dialogue-button">Cancel</div>
+        </div>
     </div>
 
     <div id="controls-info">
