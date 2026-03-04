@@ -205,6 +205,6 @@ npm run compile
 
 MIT
 
----
+![screenshot](https://raw.githubusercontent.com/mochiyaki/lobster-office-adventure/master/story.png)
 
 **Ready to play?** Press **F5** and click the lobster icon! 🦞✨
